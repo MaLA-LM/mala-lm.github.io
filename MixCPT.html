@@ -52,21 +52,25 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">Rethinking Multilingual Continual Pretraining: Data Mixing for Adapting LLMs Across Languages and Resources</h1>
-                            <div class="is-size-5 publication-authors">
-                                <span class="author-block">
-                                    <a href="http://zihao.cool" target="_blank">Zihao Li</a><sup>1</sup>,
-                                </span>
-                                <span class="author-block">
-                                  <a href="https://shaoxiongji.github.io/" target="_blank">Shaoxiong Ji</a><sup>2,1*</sup>,
-                                </span>
-                                <span class="author-block">
-                                  <a href="https://researchportal.helsinki.fi/en/persons/hengyu-luo" target="_blank">Hengyu Luo</a><sup>1</sup>,
-                                </span>
-                                <span class="author-block">
-                                  <a href="https://researchportal.helsinki.fi/en/persons/j%C3%B6rg-tiedemann" target="_blank">Jörg Tiedemann</a><sup>1</sup>,
-                                </span>
-                              </div>
+                        <h1 class="title is-1 publication-title">Rethinking Multilingual Continual Pretraining: Data
+                            Mixing for Adapting LLMs Across Languages and Resources</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="http://zihao.cool" target="_blank">Zihao Li</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://shaoxiongji.github.io/" target="_blank">Shaoxiong
+                                    Ji</a><sup>2,1*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://researchportal.helsinki.fi/en/persons/hengyu-luo"
+                                    target="_blank">Hengyu Luo</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://researchportal.helsinki.fi/en/persons/j%C3%B6rg-tiedemann"
+                                    target="_blank">Jörg Tiedemann</a><sup>1</sup>,
+                            </span>
+                        </div>
 
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
@@ -115,12 +119,22 @@
                                 </span>
                                 <!-- HuggingFace Link -->
                                 <span class="link-block">
-                                    <a href="https://huggingface.co/" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
+                                    <a href="https://huggingface.co/collections/Zihao-Li/mixcpt-67ea87fbc68ccdaa83fdc01c"
+                                        target="_blank" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <span role="img" aria-label="Hugging Face Emoji">🤗</span>
                                         </span>
-                                        <span>Model</span>
+                                        <span>Models</span>
+                                    </a>
+                                </span>
+                                <!-- Discord link -->
+                                <span class="link-block">
+                                    <a href="https://discord.com/invite/F5mEb7U6we" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-discord"></i>
+                                        </span>
+                                        <span>Discord</span>
                                     </a>
                                 </span>
                             </div>
@@ -139,7 +153,24 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Large Language Models (LLMs) exhibit significant disparities in performance across languages, primarily benefiting high-resource languages while marginalizing underrepresented ones. Continual Pretraining (CPT) has emerged as a promising approach to address this imbalance, although the relative effectiveness of monolingual, bilingual, and code-augmented data strategies remains unclear. This study systematically evaluates 36 CPT configurations involving three multilingual base models, across 30+ languages categorized as altruistic, selfish, and stagnant, spanning various resource levels. Our findings reveal three major insights: (1) Bilingual CPT improves multilingual classification but often causes language mixing issues during generation. (2) Including programming code data during CPT consistently enhances multilingual classification accuracy, particularly benefiting low-resource languages, but introduces a trade-off by slightly degrading generation quality. (3) Contrary to prior work, we observe substantial deviations from language classifications according to their impact on cross-lingual transfer: Languages classified as altruistic often negatively affect related languages, selfish languages show conditional and configuration-dependent behavior, and stagnant languages demonstrate surprising adaptability under certain CPT conditions. These nuanced interactions emphasize the complexity of multilingual representation learning, underscoring the importance of systematic studies on generalizable language classification to inform future multilingual CPT strategies.
+                            Large Language Models (LLMs) exhibit significant disparities in performance across
+                            languages, primarily benefiting high-resource languages while marginalizing underrepresented
+                            ones. Continual Pretraining (CPT) has emerged as a promising approach to address this
+                            imbalance, although the relative effectiveness of monolingual, bilingual, and code-augmented
+                            data strategies remains unclear. This study systematically evaluates 36 CPT configurations
+                            involving three multilingual base models, across 30+ languages categorized as altruistic,
+                            selfish, and stagnant, spanning various resource levels. Our findings reveal three major
+                            insights: (1) Bilingual CPT improves multilingual classification but often causes language
+                            mixing issues during generation. (2) Including programming code data during CPT consistently
+                            enhances multilingual classification accuracy, particularly benefiting low-resource
+                            languages, but introduces a trade-off by slightly degrading generation quality. (3) Contrary
+                            to prior work, we observe substantial deviations from language classifications according to
+                            their impact on cross-lingual transfer: Languages classified as altruistic often negatively
+                            affect related languages, selfish languages show conditional and configuration-dependent
+                            behavior, and stagnant languages demonstrate surprising adaptability under certain CPT
+                            conditions. These nuanced interactions emphasize the complexity of multilingual
+                            representation learning, underscoring the importance of systematic studies on generalizable
+                            language classification to inform future multilingual CPT strategies.
                         </p>
                     </div>
                 </div>
@@ -147,6 +178,283 @@
         </div>
     </section>
     <!-- End paper abstract -->
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        td a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <section class="section hero ">
+        <div class="container">
+            <div class="columns is-centered">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>🤗 Model Code</th>
+                            <th>📝 Model Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Mono-Alt" target="_blank">🤗 L3-Mono-Alt</a>
+                            </td>
+                            <td>🦙 Llama-3.1-8B CPT on monolingual data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Mono-Sel" target="_blank">🤗 L3-Mono-Sel</a>
+                            </td>
+                            <td>🦙 Llama-3.1-8B CPT on monolingual data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Mono-Stag" target="_blank">🤗
+                                    L3-Mono-Stag</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on monolingual data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Bi-Alt" target="_blank">🤗 L3-Bi-Alt</a>
+                            </td>
+                            <td>🦙 Llama-3.1-8B CPT on bilingual data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Bi-Sel" target="_blank">🤗 L3-Bi-Sel</a>
+                            </td>
+                            <td>🦙 Llama-3.1-8B CPT on bilingual data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Bi-Stag" target="_blank">🤗 L3-Bi-Stag</a>
+                            </td>
+                            <td>🦙 Llama-3.1-8B CPT on bilingual data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Mono+Code-Alt" target="_blank">🤗
+                                    L3-Mono+Code-Alt</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on monolingual+code data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Mono+Code-Sel" target="_blank">🤗
+                                    L3-Mono+Code-Sel</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on monolingual+code data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Mono+Code-Stag" target="_blank">🤗
+                                    L3-Mono+Code-Stag</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on monolingual+code data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Bi+Code-Alt" target="_blank">🤗
+                                    L3-Bi+Code-Alt</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on bilingual+code data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Bi+Code-Sel" target="_blank">🤗
+                                    L3-Bi+Code-Sel</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on bilingual+code data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L3-Bi+Code-Stag" target="_blank">🤗
+                                    L3-Bi+Code-Stag</a></td>
+                            <td>🦙 Llama-3.1-8B CPT on bilingual+code data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Mono-Alt" target="_blank">🤗 L2-Mono-Alt</a>
+                            </td>
+                            <td>🦙 Llama-2-7B CPT on monolingual data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Mono-Sel" target="_blank">🤗 L2-Mono-Sel</a>
+                            </td>
+                            <td>🦙 Llama-2-7B CPT on monolingual data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Mono-Stag" target="_blank">🤗
+                                    L2-Mono-Stag</a></td>
+                            <td>🦙 Llama-2-7B CPT on monolingual data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Bi-Alt" target="_blank">🤗 L2-Bi-Alt</a>
+                            </td>
+                            <td>🦙 Llama-2-7B CPT on bilingual data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Bi-Sel" target="_blank">🤗 L2-Bi-Sel</a>
+                            </td>
+                            <td>🦙 Llama-2-7B CPT on bilingual data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Bi-Stag" target="_blank">🤗 L2-Bi-Stag</a>
+                            </td>
+                            <td>🦙 Llama-2-7B CPT on bilingual data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Mono+Code-Alt" target="_blank">🤗
+                                    L2-Mono+Code-Alt</a></td>
+                            <td>🦙 Llama-2-7B CPT on monolingual+code data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Mono+Code-Sel" target="_blank">🤗
+                                    L2-Mono+Code-Sel</a></td>
+                            <td>🦙 Llama-2-7B CPT on monolingual+code data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Mono+Code-Stag" target="_blank">🤗
+                                    L2-Mono+Code-Stag</a></td>
+                            <td>🦙 Llama-2-7B CPT on monolingual+code data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Bi+Code-Alt" target="_blank">🤗
+                                    L2-Bi+Code-Alt</a></td>
+                            <td>🦙 Llama-2-7B CPT on bilingual+code data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Bi+Code-Sel" target="_blank">🤗
+                                    L2-Bi+Code-Sel</a></td>
+                            <td>🦙 Llama-2-7B CPT on bilingual+code data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/L2-Bi+Code-Stag" target="_blank">🤗
+                                    L2-Bi+Code-Stag</a></td>
+                            <td>🦙 Llama-2-7B CPT on bilingual+code data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Mono-Alt" target="_blank">🤗 V7-Mono-Alt</a>
+                            </td>
+                            <td>🪓 Viking-7B CPT on monolingual data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Mono-Sel" target="_blank">🤗 V7-Mono-Sel</a>
+                            </td>
+                            <td>🪓 Viking-7B CPT on monolingual data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Mono-Stag" target="_blank">🤗
+                                    V7-Mono-Stag</a></td>
+                            <td>🪓 Viking-7B CPT on monolingual data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Bi-Alt" target="_blank">🤗 V7-Bi-Alt</a>
+                            </td>
+                            <td>🪓 Viking-7B CPT on bilingual data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Bi-Sel" target="_blank">🤗 V7-Bi-Sel</a>
+                            </td>
+                            <td>🪓 Viking-7B CPT on bilingual data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Bi-Stag" target="_blank">🤗 V7-Bi-Stag</a>
+                            </td>
+                            <td>🪓 Viking-7B CPT on bilingual data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Mono+Code-Alt" target="_blank">🤗
+                                    V7-Mono+Code-Alt</a></td>
+                            <td>🪓 Viking-7B CPT on monolingual+code data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Mono+Code-Sel" target="_blank">🤗
+                                    V7-Mono+Code-Sel</a></td>
+                            <td>🪓 Viking-7B CPT on monolingual+code data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Mono+Code-Stag" target="_blank">🤗
+                                    V7-Mono+Code-Stag</a></td>
+                            <td>🪓 Viking-7B CPT on monolingual+code data for stagnant languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Bi+Code-Alt" target="_blank">🤗
+                                    V7-Bi+Code-Alt</a></td>
+                            <td>🪓 Viking-7B CPT on bilingual+code data for altruistic languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Bi+Code-Sel" target="_blank">🤗
+                                    V7-Bi+Code-Sel</a></td>
+                            <td>🪓 Viking-7B CPT on bilingual+code data for selfish languages</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/Zihao-Li/V7-Bi+Code-Stag" target="_blank">🤗
+                                    V7-Bi+Code-Stag</a></td>
+                            <td>🪓 Viking-7B CPT on bilingual+code data for stagnant languages</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section hero">
+        <div class="container">
+            <div class="columns is-centered">
+                <table class="datasets-table">
+                    <thead>
+                        <tr>
+                            <th>🤗 Dataset Name</th>
+                            <th>📝 Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/Zihao-Li/Stagnant" target="_blank">🤗
+                                    Stagnant</a></td>
+                            <td>Stagnant language data.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/Zihao-Li/Selfish" target="_blank">🤗
+                                    Selfish</a></td>
+                            <td>Selfish language data.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/Zihao-Li/Altruistic" target="_blank">🤗
+                                    Altruistic</a></td>
+                            <td>Altruistic language data.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/Zihao-Li/Code" target="_blank">🤗 Code </a>
+                            </td>
+                            <td>Programming code data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
 
     <!--BibTex citation -->
     <section class="section" id="BibTeX">
