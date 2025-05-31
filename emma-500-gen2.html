@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="Massive Language Adaptation of Large Language Models">
+    <meta property="og:title" content="MaLA-LM" />
+    <meta property="og:description"
+        content="MaLA-LM focuses on adapting large language models to support hundreds of languages, including many underrepresented ones." />
+    <meta property="og:url" content="mala-lm.github.io" />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords"
+        content="Large Language Models, Multilingual Models, Continual Pretraining, Instruction Tuning, Evaluation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>EMMA-500 Gen 2</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Massively Multilingual Adaptation of Large Language Models Using Bilingual Translation Data</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://shaoxiongji.github.io/" target="_blank">Shaoxiong Ji</a><sup>1,2*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="http://zihao.cool" target="_blank">Zihao Li</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a>Jaakko Paavola</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://ineil77.github.io" target="_blank">Indraneil Paul</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://researchportal.helsinki.fi/en/persons/hengyu-luo"
+                                    target="_blank">Hengyu Luo</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://researchportal.helsinki.fi/en/persons/j%C3%B6rg-tiedemann"
+                                    target="_blank">Jörg Tiedemann</a><sup>2</sup>,
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <sup>1</sup>Technical University of Darmstadt
+                                <sup>2</sup>University of Helsinki<br>
+
+                            </span>
+                            <span class="eql-cntrb">
+                                <small><br><sup>*</sup>Corresponding to shaoxiong.ji@tu-darmstadt.de</small>
+                            </span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Arxiv PDF link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/MaLA-LM/emma-500/" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <!-- HuggingFace Link -->
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/collections/MaLA-LM/emma-500-66eaa9acf1f512c8915b7166" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <span role="img" aria-label="Hugging Face Emoji">🤗</span>
+                                        </span>
+                                        <span>Model</span>
+                                    </a>
+                                </span>
+
+                                <!-- Discord link -->
+                                <span class="link-block">
+                                    <a href="https://discord.com/invite/F5mEb7U6we" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-discord"></i>
+                                        </span>
+                                        <span>Discord</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+This paper investigates a critical design decision in the practice of massively multilingual continual pre-training --- the inclusion of parallel data. Specifically, we study the impact of bilingual translation data for massively multilingual language adaptation of the Llama3 family of models to 500 languages. To this end, we construct a bilingual translation corpus named MaLA, containing data from more than 2,500 language pairs. Subsequently, we develop the EMMA-500 Llama 3 suite of four massively multilingual models --- continually pre-trained from the Llama 3 family of base models extensively on diverse data mixes up to 671B tokens --- and explore the effect of continual pre-training with or without bilingual translation data. Comprehensive evaluation across 7 tasks and 12 benchmarks demonstrates that bilingual data tends to enhance language transfer and performance, particularly for low-resource languages. We open-source the MaLA corpus, EMMA-500 Llama 3 suite artefacts, code, and model generations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <section class="section">
+        <div class="container is-max-desktop content">
+            <h2 class="title">Contributions</h2>
+            <ul>
+                <li>
+                    <strong>Data:</strong> We compile a bilingual translation corpus for Massive Language Adaptation in more than 2,500 language pairs and 500 languages, namely the <strong><a href="https://huggingface.co/datasets/MaLA-LM/mala-bilingual-translation-corpus" target="_blank">🤗 MaLA bilingual translation corpus</a></strong>.
+                </li>
+                <li>
+                    <strong>Models:</strong> We train and release 4 models, namely <a href="https://huggingface.co/collections/MaLA-LM/emma-500-66eaa9acf1f512c8915b7166" target="_blank"><strong>🤗 EMMA-500 Llama 3/3.1 Mono/Bi</strong></a> for Enhancing Massively Multilingual Adaptation,<a href="#footnote-emma" aria-describedby="footnote-label"><sup>1</sup></a> by continually pre-training of Llama 3 &amp; 3.1 (8B) using both monolingual and bilingual MaLA corpus augmented with diverse data types, up to 671B tokens.
+                </li>
+                <li>
+                    <strong>Evaluation:</strong> We conduct a comprehensive evaluation across 7 tasks and 12 benchmarks. Our empirical evaluation ablates the impact of two diverse data mixes and analyzes gains in task generalization and multilingual robustness.
+                </li>
+            </ul>
+            <div class="footnote">
+                <p id="footnote-label"><sup>1</sup> We use MaLA and EMMA to name the corpus and models, following the naming convention of EMMA-500 Llama 2 (<a href="https://mala-lm.github.io/emma-500.html" target="_blank">Ji et al., 2024</a>), which is not an artifact of this paper. MaLA and EMMA are a collection of corpora and models. In this paper, ``Mono'' and ``Bi'' indicate CPT on monolingual (<a href="#data-mix-composition">Mix 2</a>) and bilingual (<a href="#data-mix-composition">Mix 1</a>) mixes, respectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop content">
+            <h2 class="title">Evaluation Results and Findings</h2>
+            <ul>
+                <li>CPT using a data mix with bilingual translation data generally exhibits better multilingual performance than a monolingual mix<a href="#footnote-bilingual-mono" aria-describedby="footnote-bilingual-mono-label"><sup>2</sup></a>, particularly in low-resource languages and in machine translation tasks that directly benefit from parallel data.
+                </li>
+                <li>Heavily pre-trained models (e.g., Llama 3 and 3.1) that consume more training tokens are more resistant to further adaptation than English-centric models (e.g., Llama 2) when scaling to include many additional languages.
+                </li>
+                <li>As for overall performance, our EMMA models are the best at machine translation (Flores200) and competitive at text classification (Taxi1500 and SIB-200) and commonsense reasoning (XCOPA and XStoryCloze).
+                </li>
+                <li>EMMA CPT models exhibit a lower average accuracy on the BELEBELE comprehension benchmark, but they outperform baselines across a greater number of languages.
+                </li>
+            </ul>
+            <p>While multilingual models can achieve broad coverage, perfect uniformity across all tasks and languages remains an unattainable goal. However, we show that multilingual performance and language equality can be pushed forward with parallel training data.</p>
+            <div class="footnote">
+                <p id="footnote-bilingual-mono-label"><sup>2</sup> A monolingual mix (<a href="#data-mix-composition">Mix 2</a>) contains monolingual data in different languages but not in the aligned format as parallel data.</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .footnote {
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 1em;
+        }
+
+        .footnote a {
+            color: #777;
+            text-decoration: underline;
+        }
+    </style>
+
+<section class="section">
+        <div class="container is-max-desktop content">
+            <h2 class="title">
+                <a href="https://huggingface.co/datasets/MaLA-LM/mala-bilingual-translation-corpus" target="_blank">🤗 MaLA Bilingual Translation Corpus</a>
+            </h2>
+            <div class="table-container">
+                <table class="table is-bordered is-striped is-narrow is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Categories</th>
+                            <th>Language Pairs</th>
+                            <th>Tokens</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>very high</td>
+                            <td>4</td>
+                            <td>8.5E+10</td>
+                        </tr>
+                        <tr>
+                            <td>high</td>
+                            <td>83</td>
+                            <td>2.1E+11</td>
+                        </tr>
+                        <tr>
+                            <td>medium-high</td>
+                            <td>67</td>
+                            <td>4.7E+10</td>
+                        </tr>
+                        <tr>
+                            <td>medium</td>
+                            <td>281</td>
+                            <td>6.4E+10</td>
+                        </tr>
+                        <tr>
+                            <td>medium-low</td>
+                            <td>508</td>
+                            <td>2.0E+10</td>
+                        </tr>
+                        <tr>
+                            <td>low</td>
+                            <td>655</td>
+                            <td>2.5E+09</td>
+                        </tr>
+                        <tr>
+                            <td>very low</td>
+                            <td>909</td>
+                            <td>1.8E+08</td>
+                        </tr>
+                        <tr>
+                            <td>sum</td>
+                            <td>2507</td>
+                            <td>4.3E+11</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <caption>Table 1: Key statistics of the <a href="https://huggingface.co/datasets/MaLA-LM/mala-bilingual-translation-corpus" target="_blank">🤗 MaLA bilingual translation corpus</a>.</caption>
+            </div>
+        </div>
+    </section>
+
+<section class="section">
+        <div class="container is-max-desktop content" id="data-mix-composition">
+            <h2 class="title">Data Mix Composition</h2>
+            <div class="columns is-centered">
+                <div class="column is-half has-text-centered">
+                    <figure class="image" id="fig:mix_bilingual">
+                        <img src="static/images/mix-bilingual.png" alt="Data mix 1: bilingual">
+                    </figure>
+                    <p class="caption">Data mix 1: bilingual</p>
+                </div>
+                <div class="column is-half has-text-centered">
+                    <figure class="image" id="fig:mix_monolingual">
+                        <img src="static/images/mix-monolingual.png" alt="Data mix 2: monolingual">
+                    </figure>
+                    <p class="caption">Data mix 2: monolingual</p>
+                </div>
+            </div>
+            <caption>Figure 1: Two data mixes and their composition. The bilingual mix includes all types of data. The monolingual mix consists of a subset of the bilingual mix that excludes bilingual data (parallel texts).</caption>
+        </div>
+    </section>
+
+    <style>
+        .caption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 0.5em;
+        }
+    </style>
+    
+<section class="section">
+        <div class="container is-max-desktop content">
+            <h2 class="title">
+                <a href="https://huggingface.co/collections/MaLA-LM/emma-500-66eaa9acf1f512c8915b7166">
+                🤗 EMMA-500 Continual Pre-trained Models
+                </a></h2>
+            <div class="table-container">
+                <table class="table is-bordered is-striped is-narrow is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Base Model</th>
+                            <th>Data Mix</th>
+                            <th>Our Models</th>
+                            <th>Tokens</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Llama 3</td>
+                            <td>Monolingual (<a href="#fig:mix_monolingual">Mix 2</a>)</td>
+                            <td><a href="https://huggingface.co/MaLA-LM/emma-500-llama3-8b-mono">🤗 EMMA Llama 3 8B Mono</a></td>
+                            <td>419B</td>
+                        </tr>
+                        <tr>
+                            <td>Bilingual (<a href="#fig:mix_bilingual">Mix 1</a>)</td>
+                            <td><a href="https://huggingface.co/MaLA-LM/emma-500-llama3-8b-bi">🤗 EMMA Llama 3 8B Bi</a></td>
+                            <td>671B</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Llama 3.1</td>
+                            <td>Monolingual (<a href="#fig:mix_monolingual">Mix 2</a>)</td>
+                            <td><a href="https://huggingface.co/MaLA-LM/emma-500-llama3.1-8b-mono">🤗 EMMA Llama 3.1 8B Mono</a></td>
+                            <td>419B</td>
+                        </tr>
+                        <tr>
+                            <td>Bilingual (<a href="#fig:mix_bilingual">Mix 1</a>)</td>
+                            <td><a href="https://huggingface.co/MaLA-LM/emma-500-llama3.1-8b-bi">🤗 EMMA Llama 3.1 8B Bi</a></td>
+                            <td>671B</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <caption>Table 2: EMMA-500 continual pre-trained models and settings.</caption>
+            </div>
+        </div>
+    </section>
+
+
+<section class="section">
+        <div class="container is-max-desktop content">
+            <h2 class="title">
+                <a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results" target="_blank">
+                    <i class="fab fa-github"></i> Evaluation Results
+                </a>
+            </h2>
+            <div class="table-container">
+                <table class="table is-bordered is-striped is-narrow is-fullwidth">
+                   <thead>
+                        <tr>
+                            <th>Tasks</th>
+                            <th>Dataset</th>
+                            <th>Metric</th>
+                            <th>Samples/Lang</th>
+                            <th>N Lang</th>
+                            <th>Domain</th>
+                            <th>Results</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Text Classification</td>
+                            <td><a href="https://huggingface.co/datasets/Davlan/sib200" target="_blank">🤗 SIB200</a></td>
+                            <td>Accuracy</td>
+                            <td>204</td>
+                            <td>205</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/SIB-200" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/cisnlp/Taxi1500" target="_blank"><i class="fab fa-github"></i> Taxi1500</a></td>
+                            <td>Accuracy</td>
+                            <td>111</td>
+                            <td>1507</td>
+                            <td>Bible</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/Taxi-1500" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Commonsense Reasoning</td>
+                            <td><a href="https://huggingface.co/datasets/cambridgeltl/xcopa" target="_blank">🤗 XCOPA</a></td>
+                            <td>Accuracy</td>
+                            <td>600</td>
+                            <td>11</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/xcopa.csv" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/juletxara/xstory_cloze" target="_blank">🤗 XStoryCloze</a></td>
+                            <td>Accuracy</td>
+                            <td>1870</td>
+                            <td>11</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/xstorycloze.csv" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td>Natural Language Inference</td>
+                            <td><a href="https://huggingface.co/datasets/facebook/xnli" target="_blank">🤗 XNLI</a></td>
+                            <td>Accuracy</td>
+                            <td>2490</td>
+                            <td>15</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/xnli.csv" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td>Machine Translation</td>
+                            <td><a href="https://huggingface.co/datasets/Muennighoff/flores200" target="_blank">🤗 FLORES-200</a></td>
+                            <td>BLEU, chrF++</td>
+                            <td>1012</td>
+                            <td>204</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/FLORES-200" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Summarization</td>
+                            <td><a href="https://huggingface.co/datasets/csebuetnlp/xlsum" target="_blank">🤗 XL-Sum</a></td>
+                            <td>ROUGE-L, BERTScore</td>
+                            <td>2537</td>
+                            <td>44</td>
+                            <td>News</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/XLSum" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/MaLA-LM/MassiveSumm_long" target="_blank">🤗 MassiveSumm Long</a></td>
+                            <td>ROUGE-L, BERTScore</td>
+                            <td>3908</td>
+                            <td>55</td>
+                            <td>News</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/MassiveSumm" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/MaLA-LM/MassiveSumm_short" target="_blank">🤗 MassiveSumm Short</a></td>
+                            <td>ROUGE-L, BERTScore</td>
+                            <td>5538</td>
+                            <td>88</td>
+                            <td>News</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/MassiveSumm" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Machine Comprehension</td>
+                            <td><a href="https://huggingface.co/datasets/facebook/belebele" target="_blank">🤗 BELEBELE</a></td>
+                            <td>Accuracy</td>
+                            <td>900</td>
+                            <td>122</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/belebele.csv" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/nlp-uoregon/Okapi" target="_blank"><i class="fab fa-github"></i> ARC multilingual</a></td>
+                            <td>Accuracy</td>
+                            <td>1170</td>
+                            <td>31</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/arc_multilingual.csv" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Math</td>
+                            <td><a href="https://huggingface.co/datasets/juletxara/mgsm" target="_blank">🤗 MGSM direct</a></td>
+                            <td>Accuracy</td>
+                            <td>250</td>
+                            <td>10</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/mgsm_direct" target="_blank">[Results]</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/juletxara/mgsm" target="_blank">🤗 MGSM CoT</a></td>
+                            <td>Accuracy</td>
+                            <td>250</td>
+                            <td>10</td>
+                            <td>Misc</td>
+                            <td><a href="https://github.com/MaLA-LM/emma-500/tree/main/evaluation_results/mgsm_cot.csv" target="_blank">[Results]</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <caption>Table 3: Evaluation statistics. Sample/Lang: average number of test samples per language; N Lang: number of languages covered.</caption>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .table-container {
+            overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+        }
+    </style>
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>
+@article{ji2024emma2,
+
+}
+      </code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            You are free to borrow the source code of this website, we just ask that you link back to
+                            this page in the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HHYRBMV6MN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HHYRBMV6MN');
+    </script>
+
+</body>
+
+</html>

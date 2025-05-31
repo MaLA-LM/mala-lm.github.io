@@ -190,10 +190,54 @@
     </section>
     <!-- End paper abstract -->
 
-    <section class="section hero">
+
+    <section class="section">
+        <div class="container is-max-desktop content">
+            <h2 class="title">MaLA Monolingual Corpus</h2>
+            <div class="table-container">
+                <table class="table is-bordered is-striped is-narrow is-fullwidth">
+                    <caption>Details of the MaLA Monolingual Corpus Versions.</caption>
+                    <thead>
+                        <tr>
+                            <th>Corpus Name</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/MaLA-LM/mala-monolingual-integration" target="_blank">🤗 MaLA-LM/mala-monolingual-integration</a></td>
+                            <td>Noisy version integrating texts from different sources without cleaning.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/MaLA-LM/mala-monolingual-filter" target="_blank">🤗 MaLA-LM/mala-monolingual-filter</a></td>
+                            <td>Filtered version with further data filtering.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/MaLA-LM/mala-monolingual-dedup" target="_blank">🤗 MaLA-LM/mala-monolingual-dedup</a></td>
+                            <td>Deduplicated version removing repeated data points.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://huggingface.co/datasets/MaLA-LM/mala-monolingual-split" target="_blank">🤗 MaLA-LM/mala-monolingual-split</a></td>
+                            <td>Final version, split into training and test sets after filtering and deduplication.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .table-container {
+            overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+        }
+    </style>
+
+
+   <section class="section hero">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-full-tablet is-two-thirds-desktop">
+                    <h2 class="title is-3">Performance Overview</h2>
                     <figure class="image">
                         <img src="static/images/emma-500-chart.png" alt="Your Image Alt Text"
                             style="max-width: 150%; height: auto;" />
