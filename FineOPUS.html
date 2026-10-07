@@ -1,37 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="FineOPUS: Refining the World’s Largest Parallel Corpus for the Future of AI">
-    <meta property="og:title" content="FineOPUS" />
-    <meta property="og:description" content="A Massively Multilingual Translation Corpus and Pipeline" />
-    <meta property="og:url" content="opus.nlpl.eu" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FineOPUS: A Massively Multilingual Translation Corpus and Pipeline | MaLA-LM</title>
+  <meta name="description" content="FineOPUS refines the OPUS collection into a high-quality, massively multilingual parallel corpus with an empirically validated cleaning and quality-estimation pipeline.">
+  <meta name="keywords" content="FineOPUS, OPUS, parallel corpus, machine translation, data curation, multilingual, quality estimation">
+  <link rel="canonical" href="https://mala-lm.github.io/FineOPUS.html">
 
-    <meta name="twitter:title" content="FineOPUS">
-    <meta name="twitter:description" content="Refining the World’s Largest Parallel Corpus for the Future of AI">
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph / social previews -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MaLA-LM">
+  <meta property="og:title" content="FineOPUS: A Massively Multilingual Translation Corpus and Pipeline">
+  <meta property="og:description" content="FineOPUS refines the OPUS collection into a high-quality, massively multilingual parallel corpus with an empirically validated cleaning and quality-estimation pipeline.">
+  <meta property="og:url" content="https://mala-lm.github.io/FineOPUS.html">
+  <meta property="og:image" content="https://mala-lm.github.io/static/images/logos/mala-lm.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FineOPUS: A Massively Multilingual Translation Corpus and Pipeline">
+  <meta name="twitter:description" content="FineOPUS refines the OPUS collection into a high-quality, massively multilingual parallel corpus with an empirically validated cleaning and quality-estimation pipeline.">
+  <meta name="twitter:image" content="https://mala-lm.github.io/static/images/logos/mala-lm.png">
 
-    <meta name="keywords" content="NLP, Machine Translation, Data Curation, LLM, Multilingual AI, OPUS">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>FineOPUS</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FineOPUS: A Massively Multilingual Translation Corpus and Pipeline",
+    "name": "FineOPUS: A Massively Multilingual Translation Corpus and Pipeline",
+    "description": "FineOPUS refines the OPUS collection into a high-quality, massively multilingual parallel corpus with an empirically validated cleaning and quality-estimation pipeline.",
+    "url": "https://mala-lm.github.io/FineOPUS.html",
+    "image": "https://mala-lm.github.io/static/images/logos/mala-lm.png",
+    "inLanguage": "en",
+    "keywords": "FineOPUS, OPUS, parallel corpus, machine translation, data curation, multilingual, quality estimation",
+    "datePublished": "2025-11-21",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MaLA-LM",
+      "url": "https://mala-lm.github.io/",
+      "logo": "https://mala-lm.github.io/static/images/logos/mala-lm.png"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "MaLA-LM",
+      "url": "https://mala-lm.github.io/"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "MaLA-LM",
+      "url": "https://mala-lm.github.io/",
+      "logo": "https://mala-lm.github.io/static/images/logos/mala-lm.png"
+    },
+    "sameAs": [
+      "https://github.com/MaLA-LM/FineOPUS",
+      "https://huggingface.co/collections/MaLA-LM/fineopus"
+    ]
+  }
+  </script>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="200x200" href="static/images/logos/mala-lm.png">
+  <link rel="apple-touch-icon" href="static/images/logos/mala-lm.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inter:wght@300;400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="static/css/bulma.min.css">
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="static/js/fontawesome.all.min.js"></script>
-    <script src="static/js/index.js"></script>
+    <script defer src="static/js/index.js"></script>
+    <script defer src="static/js/site.js"></script>
 </head>
 
 <body>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a class="site-nav-brand" href="index.html" aria-label="MaLA-LM home"><img src="static/images/logos/mala-lm.png" alt="" class="site-nav-logo"></a>
+    <button class="site-nav-burger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-menu"><span></span><span></span><span></span></button>
+    <div class="site-nav-menu" id="site-nav-menu">
+      <a class="site-nav-item" href="index.html#updates">Updates</a>
+      <a class="site-nav-item" href="index.html#research">Research</a>
+      <a class="site-nav-item" href="index.html#works">Projects</a>
+      <a class="site-nav-item" href="publications.html">Publications</a>
+      <span class="site-nav-sep" aria-hidden="true"></span>
+      <a class="site-nav-icon" href="https://github.com/MaLA-LM" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i><span class="nav-label">GitHub</span></a>
+      <a class="site-nav-icon" href="https://huggingface.co/MaLA-LM" target="_blank" title="Hugging Face" aria-label="Hugging Face"><span aria-hidden="true">🤗</span><span class="nav-label">Hugging Face</span></a>
+      <a class="site-nav-icon" href="https://discord.com/invite/F5mEb7U6we" target="_blank" title="Discord" aria-label="Discord"><i class="fab fa-discord"></i><span class="nav-label">Discord</span></a>
+    </div>
+  </nav>
 
     <section class="hero">
         <div class="hero-body">
@@ -245,27 +303,31 @@
     </section>
 
 
-    <footer class="footer">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-8">
-                    <div class="content">
-                        <p>
-                            This page was built using the <a
-                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-                            You are free to borrow the source code of this website, we just ask that you link back to
-                            this page in the footer. <br> This website is licensed under a <a rel="license"
-                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                                Commons Attribution-ShareAlike 4.0 International License</a>.
-                        </p>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a href="index.html" class="site-footer-brand">
+        <img src="static/images/logos/mala-lm.png" alt="MaLA-LM logo">
+        <span><strong>MaLA-LM</strong><span>Massive Language Adaptation of Large Language Models</span></span>
+      </a>
+      <div class="site-footer-links">
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/MaLA-LM" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://huggingface.co/MaLA-LM" target="_blank">🤗 Hugging Face</a>
+        <a href="https://discord.com/invite/F5mEb7U6we" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+      </div>
+    </div>
+    <div class="site-footer-base">&copy; 2026 MaLA-LM</div>
+  </footer>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HHYRBMV6MN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HHYRBMV6MN');
+    </script>
 
 </body>
 

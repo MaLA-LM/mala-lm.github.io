@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 700"
+   width="800"
+   height="700"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="logo-v0-opacity0.6.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   inkscape:export-filename="OLAResearch-square-navy-gold.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1256209"
+     inkscape:cx="477.95844"
+     inkscape:cy="354.02684"
+     inkscape:window-width="1710"
+     inkscape:window-height="1044"
+     inkscape:window-x="0"
+     inkscape:window-y="35"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg28">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="800"
+       height="700"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs28" />
+  <title
+     id="title1">OLAResearch</title>
+  <rect
+     x="122.90061"
+     y="34.458393"
+     width="572"
+     height="572"
+     rx="84"
+     fill="#10233f"
+     id="rect_frame" />
+  <g
+     transform="translate(155.54918,71.584484)"
+     id="g25">
+    <g
+       fill="#f2b13c"
+       stroke="#f2b13c"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="g6">
+      <line
+         x1="32"
+         y1="256"
+         x2="160"
+         y2="256"
+         stroke-width="18"
+         id="line2" />
+      <line
+         x1="96"
+         y1="148"
+         x2="160"
+         y2="256"
+         stroke-width="18"
+         id="line3" />
+      <line
+         x1="96"
+         y1="364"
+         x2="160"
+         y2="256"
+         stroke-width="18"
+         id="line4" />
+      <circle
+         cx="32"
+         cy="256"
+         r="23"
+         id="circle_image" />
+      <circle
+         cx="96"
+         cy="148"
+         r="23"
+         id="circle_text" />
+      <circle
+         cx="96"
+         cy="364"
+         r="23"
+         id="circle_health" />
+    </g>
+    <g
+       id="group_image"
+       opacity="0.6">
+      <rect
+         x="15"
+         y="239"
+         width="34"
+         height="34"
+         rx="12"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="2"
+         id="rect_image" />
+      <path
+         d="m 21,265 q 7,-12 14,-5 4,4 8,5"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="2"
+         stroke-linecap="round"
+         id="path_image" />
+      <rect
+         x="34"
+         y="245"
+         width="7"
+         height="7"
+         rx="2"
+         fill="#f7e5bf"
+         id="rect1" />
+    </g>
+    <g
+       transform="translate(2.9090909,11.890909)"
+       font-family="'Avenir Next', 'Segoe UI', Arial, sans-serif"
+       font-weight="600"
+       text-anchor="middle"
+       id="group_text"
+       opacity="0.6">
+      <rect
+         x="75"
+         y="134"
+         width="19"
+         height="17"
+         rx="5"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="1"
+         id="rect_text_1"
+         style="display:none" />
+      <rect
+         x="91"
+         y="122"
+         width="19"
+         height="17"
+         rx="5"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="1"
+         id="rect_text_2"
+         style="display:none" />
+      <text
+         x="87.969437"
+         y="146.16795"
+         font-size="13px"
+         fill="#f7e5bf"
+         id="text_en">A</text>
+      <text
+         x="97.86261"
+         y="135.30534"
+         font-size="13px"
+         fill="#f7e5bf"
+         id="text_zh">文</text>
+      <rect
+         x="75.296867"
+         y="118.804"
+         width="34"
+         height="34"
+         rx="12"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="2"
+         id="rect_text" />
+    </g>
+    <g
+       id="group_health"
+       opacity="0.6">
+      <path
+         d="m 82.372778,359 h 4.929841 l 2.464921,-4.71124 2.46492,9.42248 L 94.697381,359 h 4.929841"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="2.40965"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path_pulse" />
+      <rect
+         x="78.931175"
+         y="347.54932"
+         width="34"
+         height="34"
+         rx="12"
+         fill="none"
+         stroke="#f7e5bf"
+         stroke-width="2"
+         id="rect_health" />
+    </g>
+    <g
+       id="group_cross"
+       transform="matrix(0.62195805,0,0,0.59287791,40.130607,154.19749)"
+       opacity="0.78">
+      <rect
+         x="90"
+         y="365"
+         width="21"
+         height="5"
+         rx="1.5"
+         fill="#f7e5bf"
+         id="rect_horizontal" />
+      <rect
+         x="98"
+         y="357"
+         width="5"
+         height="21"
+         rx="1.5"
+         fill="#f7e5bf"
+         id="rect_vertical" />
+    </g>
+    <circle
+       cx="278"
+       cy="256"
+       r="23"
+       fill="#f2b13c"
+       id="centeral_circle" />
+    <circle
+       cx="176.45454"
+       cy="256.43634"
+       r="23"
+       fill="#f2b13c"
+       id="circle13" />
+    <g
+       fill="#f2b13c"
+       transform="translate(-6)"
+       id="g24">
+      <polygon
+         points="329,162 232,106 220,99 219,98 219,97 220,94 347,94 358,113 355,119 340,145 333,157 330,162 "
+         id="polygon13" />
+      <polygon
+         points="299,216 296,221 294,223 273,223 271,221 260,202 219,131 211,117 209,113 212,110 213,110 217,112 224,116 295,157 314,168 319,171 322,173 323,174 322,176 310,197 "
+         id="polygon14" />
+      <polygon
+         points="451,232 447,230 433,222 355,177 343,170 342,168 342,167 357,141 368,122 370,120 392,120 393,121 395,124 406,143 432,188 447,214 455,228 455,230 453,232 "
+         id="polygon15" />
+      <polygon
+         points="336,181 338,181 342,183 394,213 439,239 444,242 445,244 445,248 319,248 309,230 309,228 310,226 318,212 329,193 "
+         id="polygon16" />
+      <polygon
+         points="444,269 439,272 394,298 342,328 338,330 336,330 329,318 314,292 310,285 309,283 309,281 319,263 445,263 445,267 "
+         id="polygon17" />
+      <polygon
+         points="370,391 368,389 357,370 342,343 342,342 343,341 355,334 433,289 447,281 451,279 453,279 455,281 455,283 447,297 406,368 395,387 393,390 392,391 "
+         id="polygon18" />
+      <polygon
+         points="322,338 319,340 314,343 295,354 224,395 217,399 213,401 212,401 209,398 211,394 219,380 260,309 271,290 273,288 294,288 296,290 299,295 310,314 322,335 323,337 "
+         id="polygon19" />
+      <polygon
+         points="358,398 347,417 220,417 219,414 219,413 220,412 232,405 329,349 330,349 333,354 340,366 355,392 "
+         id="polygon20" />
+      <circle
+         cx="186"
+         cy="87"
+         r="23"
+         id="circle20" />
+      <circle
+         cx="381"
+         cy="87"
+         r="23"
+         id="circle21" />
+      <circle
+         cx="381"
+         cy="424"
+         r="23"
+         id="circle22" />
+      <circle
+         cx="186"
+         cy="424"
+         r="23"
+         id="circle23" />
+      <circle
+         cx="478"
+         cy="256"
+         r="23"
+         id="circle24" />
+    </g>
+  </g>
+</svg>

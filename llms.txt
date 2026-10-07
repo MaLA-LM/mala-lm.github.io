@@ -1,0 +1,40 @@
+# MaLA-LM
+
+> MaLA-LM (Massive Language Adaptation of Large Language Models) adapts large language models to hundreds of languages, including many underrepresented ones. It releases open corpora, continually pretrained multilingual models, instruction-tuned models and massively multilingual evaluation tools.
+
+Key facts:
+
+- MaLA monolingual corpus: 939 languages.
+- MaLA bilingual translation corpus: 2,500+ language pairs.
+- MaLA OPUS corpus (deduplicated, 2410): 16,000+ language pairs.
+- EMMA-500 Llama 3/3.1 models: continual pretraining on up to 671B tokens across 500+ languages.
+- MaLA-500: Llama 2 extended to 534 languages; EMMA-500 Llama 2: 546 languages.
+- Models and datasets are on Hugging Face (https://huggingface.co/MaLA-LM); code is on GitHub (https://github.com/MaLA-LM).
+
+## Pages
+
+- [Home](https://mala-lm.github.io/): overview, latest updates, research directions and projects
+- [Publications](https://mala-lm.github.io/publications.html): all papers with venues, links and BibTeX, searchable by year
+
+## Projects and papers
+
+- [FineOPUS](https://mala-lm.github.io/FineOPUS.html): a massively multilingual translation corpus and pipeline that refines the OPUS collection of parallel texts (launched November 2025)
+- [EMMA-500 Gen2](https://mala-lm.github.io/emma-500-gen2.html): Massively Multilingual Adaptation of Large Language Models Using Bilingual Translation Data; published as "Data-Centric Continual Pre-training for 500+ Languages: A New Bilingual Translation Corpus and Multilingual Models", Findings of ACL 2026
+- [EMMA-500](https://mala-lm.github.io/emma-500.html): Enhancing Massively Multilingual Adaptation of Large Language Models; published as "MaLA: A Corpus and Data Mix for Massive Language Adaptation of Large Language Models", COLM 2026
+- [MaLA-500](https://mala-lm.github.io/mala-500.html): Massive Language Adaptation of Large Language Models (arXiv 2401.13303, 2024)
+- [MixCPT](https://mala-lm.github.io/MixCPT.html): Rethinking Multilingual Continual Pretraining: Data Mixing for Adapting LLMs Across Languages and Resources, COLM 2025
+- [GlotEval](https://mala-lm.github.io/GlotEval.html): A Test Suite for Massively Multilingual Evaluation of Large Language Models, EMNLP 2025 System Demonstrations
+
+## Research directions
+
+- Data construction: MaLA corpus, FineOPUS, PolyWrite benchmark
+- Continual pretraining: EMMA-500 Gen2, EMMA-500, MaLA-500, MixCPT
+- Instruction fine-tuning: Lucky 52 (How Many Languages Make Good Multilingual Instruction Tuning?, COLING 2025); Monolingual or Multilingual Instruction Tuning (Findings of EACL 2024)
+- Evaluation: GlotEval, PolyWrite, model-based quality assessment for multilingual parallel data
+
+## Optional
+
+- [Hugging Face organization](https://huggingface.co/MaLA-LM): models and datasets
+- [GitHub organization](https://github.com/MaLA-LM): code
+- [Discord community](https://discord.com/invite/F5mEb7U6we)
+- [Omni Language AI Research](https://olaresearch.org)

@@ -1,41 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Massive Language Adaptation of Large Language Models">
-  <meta property="og:title" content="MaLA-LM" />
-  <meta property="og:description"
-    content="MaLA-LM focuses on adapting large language models to support hundreds of languages, including many underrepresented ones." />
-  <meta property="og:url" content="mala-lm.github.io" />
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords"
-    content="Large Language Models, Multilingual Models, Continual Pretraining, Instruction Tuning, Evaluation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MaLA-500: Massive Language Adaptation of Large Language Models | MaLA-LM</title>
+  <meta name="description" content="MaLA-500 is a large language model covering 534 languages, trained with vocabulary extension and continued pretraining of Llama 2 on Glot500-c.">
+  <meta name="keywords" content="MaLA-500, multilingual LLM, low-resource languages, continual pretraining, vocabulary extension, Llama 2, Glot500-c">
+  <link rel="canonical" href="https://mala-lm.github.io/mala-500.html">
 
+  <!-- Open Graph / social previews -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MaLA-LM">
+  <meta property="og:title" content="MaLA-500: Massive Language Adaptation of Large Language Models">
+  <meta property="og:description" content="MaLA-500 is a large language model covering 534 languages, trained with vocabulary extension and continued pretraining of Llama 2 on Glot500-c.">
+  <meta property="og:url" content="https://mala-lm.github.io/mala-500.html">
+  <meta property="og:image" content="https://mala-lm.github.io/static/images/logos/mala-lm.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MaLA-500: Massive Language Adaptation of Large Language Models">
+  <meta name="twitter:description" content="MaLA-500 is a large language model covering 534 languages, trained with vocabulary extension and continued pretraining of Llama 2 on Glot500-c.">
+  <meta name="twitter:image" content="https://mala-lm.github.io/static/images/logos/mala-lm.png">
 
-  <title>MaLA-500</title>
+  <!-- Google Scholar -->
+  <meta name="citation_title" content="MaLA-500: Massive Language Adaptation of Large Language Models">
+  <meta name="citation_author" content="Peiqin Lin">
+  <meta name="citation_author" content="Shaoxiong Ji">
+  <meta name="citation_author" content="Jörg Tiedemann">
+  <meta name="citation_author" content="André F. T. Martins">
+  <meta name="citation_author" content="Hinrich Schütze">
+  <meta name="citation_publication_date" content="2024/01">
+  <meta name="citation_arxiv_id" content="2401.13303">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2401.13303">
+  <meta name="citation_abstract_html_url" content="https://mala-lm.github.io/mala-500.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "MaLA-500: Massive Language Adaptation of Large Language Models",
+    "name": "MaLA-500: Massive Language Adaptation of Large Language Models",
+    "description": "MaLA-500 is a large language model covering 534 languages, trained with vocabulary extension and continued pretraining of Llama 2 on Glot500-c.",
+    "url": "https://mala-lm.github.io/mala-500.html",
+    "image": "https://mala-lm.github.io/static/images/logos/mala-lm.png",
+    "inLanguage": "en",
+    "keywords": "MaLA-500, multilingual LLM, low-resource languages, continual pretraining, vocabulary extension, Llama 2, Glot500-c",
+    "datePublished": "2024-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MaLA-LM",
+      "url": "https://mala-lm.github.io/",
+      "logo": "https://mala-lm.github.io/static/images/logos/mala-lm.png"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "MaLA-LM",
+      "url": "https://mala-lm.github.io/"
+    },
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Peiqin Lin"
+      },
+      {
+        "@type": "Person",
+        "name": "Shaoxiong Ji"
+      },
+      {
+        "@type": "Person",
+        "name": "Jörg Tiedemann"
+      },
+      {
+        "@type": "Person",
+        "name": "André F. T. Martins"
+      },
+      {
+        "@type": "Person",
+        "name": "Hinrich Schütze"
+      }
+    ],
+    "sameAs": [
+      "https://arxiv.org/abs/2401.13303"
+    ]
+  }
+  </script>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="200x200" href="static/images/logos/mala-lm.png">
+  <link rel="apple-touch-icon" href="static/images/logos/mala-lm.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inter:wght@300;400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="static/js/index.js"></script>
+    <script defer src="static/js/site.js"></script>
 </head>
 
 <body>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a class="site-nav-brand" href="index.html" aria-label="MaLA-LM home"><img src="static/images/logos/mala-lm.png" alt="" class="site-nav-logo"></a>
+    <button class="site-nav-burger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-menu"><span></span><span></span><span></span></button>
+    <div class="site-nav-menu" id="site-nav-menu">
+      <a class="site-nav-item" href="index.html#updates">Updates</a>
+      <a class="site-nav-item" href="index.html#research">Research</a>
+      <a class="site-nav-item" href="index.html#works">Projects</a>
+      <a class="site-nav-item" href="publications.html">Publications</a>
+      <span class="site-nav-sep" aria-hidden="true"></span>
+      <a class="site-nav-icon" href="https://github.com/MaLA-LM" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i><span class="nav-label">GitHub</span></a>
+      <a class="site-nav-icon" href="https://huggingface.co/MaLA-LM" target="_blank" title="Hugging Face" aria-label="Hugging Face"><span aria-hidden="true">🤗</span><span class="nav-label">Hugging Face</span></a>
+      <a class="site-nav-icon" href="https://discord.com/invite/F5mEb7U6we" target="_blank" title="Discord" aria-label="Discord"><i class="fab fa-discord"></i><span class="nav-label">Discord</span></a>
+    </div>
+  </nav>
 
 
   <section class="hero">
@@ -187,26 +268,20 @@
   <!--End BibTex citation -->
 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the
-              footer. <br> This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-
-          </div>
-        </div>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a href="index.html" class="site-footer-brand">
+        <img src="static/images/logos/mala-lm.png" alt="MaLA-LM logo">
+        <span><strong>MaLA-LM</strong><span>Massive Language Adaptation of Large Language Models</span></span>
+      </a>
+      <div class="site-footer-links">
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/MaLA-LM" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://huggingface.co/MaLA-LM" target="_blank">🤗 Hugging Face</a>
+        <a href="https://discord.com/invite/F5mEb7U6we" target="_blank"><i class="fab fa-discord"></i> Discord</a>
       </div>
     </div>
+    <div class="site-footer-base">&copy; 2026 MaLA-LM</div>
   </footer>
 
   <!-- Google tag (gtag.js) -->

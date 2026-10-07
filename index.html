@@ -1,212 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Massive Language Adaptation of Large Language Models">
-  <meta property="og:title" content="MaLA-LM" />
-  <meta property="og:description"
-    content="MaLA-LM focuses on adapting large language models to support hundreds of languages, including many underrepresented ones." />
-  <meta property="og:url" content="mala-lm.github.io" />
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords"
-    content="Large Language Models, Multilingual Models, Continual Pretraining, Instruction Tuning, Evaluation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MaLA-LM: Massive Language Adaptation of Large Language Models</title>
+  <meta name="description" content="MaLA-LM adapts large language models to hundreds of languages, including underrepresented ones, with open corpora, continual pretraining and multilingual evaluation.">
+  <meta name="keywords" content="MaLA-LM, multilingual large language models, low-resource languages, continual pretraining, instruction tuning, multilingual evaluation, EMMA-500, MaLA corpus">
+  <link rel="canonical" href="https://mala-lm.github.io/">
 
+  <!-- Open Graph / social previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MaLA-LM">
+  <meta property="og:title" content="MaLA-LM: Massive Language Adaptation of Large Language Models">
+  <meta property="og:description" content="MaLA-LM adapts large language models to hundreds of languages, including underrepresented ones, with open corpora, continual pretraining and multilingual evaluation.">
+  <meta property="og:url" content="https://mala-lm.github.io/">
+  <meta property="og:image" content="https://mala-lm.github.io/static/images/logos/mala-lm.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MaLA-LM: Massive Language Adaptation of Large Language Models">
+  <meta name="twitter:description" content="MaLA-LM adapts large language models to hundreds of languages, including underrepresented ones, with open corpora, continual pretraining and multilingual evaluation.">
+  <meta name="twitter:image" content="https://mala-lm.github.io/static/images/logos/mala-lm.png">
 
-  <title>Massive Language Adaptation of Large Language Models</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ResearchOrganization",
+        "@id": "https://mala-lm.github.io/#org",
+        "name": "MaLA-LM",
+        "alternateName": "Massive Language Adaptation of Large Language Models",
+        "url": "https://mala-lm.github.io/",
+        "logo": "https://mala-lm.github.io/static/images/logos/mala-lm.png",
+        "description": "MaLA-LM adapts large language models to hundreds of languages, including underrepresented ones, with open corpora, continual pretraining and multilingual evaluation.",
+        "sameAs": [
+          "https://github.com/MaLA-LM",
+          "https://huggingface.co/MaLA-LM"
+        ],
+        "knowsAbout": [
+          "Multilingual large language models",
+          "Low-resource languages",
+          "Continual pretraining",
+          "Instruction tuning",
+          "Machine translation",
+          "Multilingual evaluation",
+          "Parallel corpora"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mala-lm.github.io/#website",
+        "name": "MaLA-LM",
+        "url": "https://mala-lm.github.io/",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://mala-lm.github.io/#org"
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="200x200" href="static/images/logos/mala-lm.png">
+  <link rel="apple-touch-icon" href="static/images/logos/mala-lm.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inter:wght@300;400;500;600&family=Noto+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="static/js/site.js"></script>
 </head>
 
-<body>
+<body class="landing">
 
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a class="site-nav-brand" href="index.html" aria-label="MaLA-LM home"><img src="static/images/logos/mala-lm.png" alt="" class="site-nav-logo"></a>
+    <button class="site-nav-burger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-menu"><span></span><span></span><span></span></button>
+    <div class="site-nav-menu" id="site-nav-menu">
+      <a class="site-nav-item" href="index.html#updates">Updates</a>
+      <a class="site-nav-item" href="index.html#research">Research</a>
+      <a class="site-nav-item" href="index.html#works">Projects</a>
+      <a class="site-nav-item" href="publications.html">Publications</a>
+      <span class="site-nav-sep" aria-hidden="true"></span>
+      <a class="site-nav-icon" href="https://github.com/MaLA-LM" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i><span class="nav-label">GitHub</span></a>
+      <a class="site-nav-icon" href="https://huggingface.co/MaLA-LM" target="_blank" title="Hugging Face" aria-label="Hugging Face"><span aria-hidden="true">🤗</span><span class="nav-label">Hugging Face</span></a>
+      <a class="site-nav-icon" href="https://discord.com/invite/F5mEb7U6we" target="_blank" title="Discord" aria-label="Discord"><i class="fab fa-discord"></i><span class="nav-label">Discord</span></a>
+    </div>
+  </nav>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Massive Language Adaptation of Large Language Models</h1>
-            <h2 class="subtitle is-3">MaLA-LM</h2>
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- Discord link -->
-                <span class="link-block">
-                  <a href="https://discord.com/invite/F5mEb7U6we" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-discord"></i>
-                    </span>
-                    <span>Discord</span>
-                  </a>
-                </span>
+  <!-- Teaser -->
+  <header class="teaser">
+    <div class="teaser-shape teaser-shape-earth" aria-hidden="true"></div>
+    <div class="teaser-shape teaser-shape-sage" aria-hidden="true"></div>
 
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/MaLA-LM" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                  </a>
-                </span>
+    <div class="teaser-inner">
+      <img src="static/images/logos/mala-lm.png" alt="MaLA-LM logo" class="teaser-logo">
+      <p class="teaser-eyebrow">MaLA-LM &middot; Massive Language Adaptation</p>
+      <h1 class="teaser-title">
+        Large language models that speak
+        <span class="teaser-rotator" aria-hidden="true"><span class="teaser-word" data-words='["hundreds of languages","kaikkia kieliä","अनेक भाषाएँ","多种语言","lugha nyingi","множество языков","多くの言語","ብዙ ቋንቋዎች","many languages"]'>hundreds of languages</span></span><span class="sr-only">hundreds of languages</span>
+      </h1>
+      <p class="teaser-lede">
+        We adapt large language models to hundreds of languages, including many underrepresented ones,
+        through open corpora, continual pretraining, reasoning, instruction tuning and massively multilingual evaluation.
+      </p>
 
-                <!-- HuggingFace Link -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/MaLA-LM" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <span role="img" aria-label="Hugging Face Emoji">🤗</span>
-                    </span>
-                    <span>HuggingFace</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
+      <div class="teaser-actions">
+        <a href="#works" class="btn-primary">Explore our work</a>
+        <a href="publications.html" class="btn-secondary">Publications</a>
+      </div>
+
+      <div class="teaser-social">
+        <span class="teaser-social-label">Follow us</span>
+        <a href="https://huggingface.co/MaLA-LM" target="_blank" class="cta-button cta-hf"><span aria-hidden="true">🤗</span>&nbsp; Hugging Face</a>
+        <a href="https://github.com/MaLA-LM" target="_blank" class="cta-button cta-github"><i class="fab fa-github"></i>&nbsp; GitHub</a>
+        <a href="https://discord.com/invite/F5mEb7U6we" target="_blank" class="cta-button cta-discord"><i class="fab fa-discord"></i>&nbsp; Discord</a>
+        <a href="https://olaresearch.org" target="_blank" class="cta-button cta-ola"><img src="static/images/logos/olaresearch.svg" alt="" class="cta-logo">Omni Language AI Research</a>
+      </div>
+    </div>
+
+    <!-- "Language" in many languages, drifting past -->
+    <div class="lang-marquee" aria-hidden="true">
+      <div class="lang-track">
+        <span>Kieli</span><span>Sprache</span><span>语言</span><span>Langue</span><span>भाषा</span><span>Lugha</span><span>لغة</span><span>Язык</span><span>言語</span><span>Ede</span><span>언어</span><span>Lengua</span><span>ቋንቋ</span><span>Γλώσσα</span><span>ภาษา</span><span>Dil</span><span>மொழி</span><span>Bahasa</span><span>שפה</span><span>Nyelv</span><span>ენა</span><span>Harshe</span><span>Teanga</span><span>ভাষা</span><span>Ngôn ngữ</span><span>Iaith</span><span>Lingvo</span><span>Reo</span>
+        <span>Kieli</span><span>Sprache</span><span>语言</span><span>Langue</span><span>भाषा</span><span>Lugha</span><span>لغة</span><span>Язык</span><span>言語</span><span>Ede</span><span>언어</span><span>Lengua</span><span>ቋንቋ</span><span>Γλώσσα</span><span>ภาษา</span><span>Dil</span><span>மொழி</span><span>Bahasa</span><span>שפה</span><span>Nyelv</span><span>ენა</span><span>Harshe</span><span>Teanga</span><span>ভাষা</span><span>Ngôn ngữ</span><span>Iaith</span><span>Lingvo</span><span>Reo</span>
+      </div>
+      <div class="lang-track lang-track-reverse">
+        <span>Taal</span><span>Мова</span><span>زبان</span><span>Lingua</span><span>ភាសា</span><span>Keel</span><span>Hizkuntza</span><span>భాష</span><span>Ulimi</span><span>Jazyk</span><span>Limbă</span><span>Լեզու</span><span>ਭਾਸ਼ਾ</span><span>Kalba</span><span>Wika</span><span>ພາສາ</span><span>Valoda</span><span>Gjuha</span><span>ഭാഷ</span><span>Idioma</span><span>Хэл</span><span>Język</span><span>ಭಾಷೆ</span><span>Puo</span><span>ʻŌlelo</span><span>Tungumál</span><span>ભાષા</span><span>Llengua</span>
+        <span>Taal</span><span>Мова</span><span>زبان</span><span>Lingua</span><span>ភាសា</span><span>Keel</span><span>Hizkuntza</span><span>భాష</span><span>Ulimi</span><span>Jazyk</span><span>Limbă</span><span>Լեզու</span><span>ਭਾਸ਼ਾ</span><span>Kalba</span><span>Wika</span><span>ພາສາ</span><span>Valoda</span><span>Gjuha</span><span>ഭാഷ</span><span>Idioma</span><span>Хэл</span><span>Język</span><span>ಭಾಷೆ</span><span>Puo</span><span>ʻŌlelo</span><span>Tungumál</span><span>ભાષા</span><span>Llengua</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Headline figures -->
+  <section class="figures" aria-label="MaLA-LM in numbers">
+    <div class="figures-grid">
+      <div class="figure-item reveal">
+        <span class="figure-num" data-count="939">939</span>
+        <span class="figure-lab">languages in the MaLA monolingual corpus</span>
+      </div>
+      <div class="figure-item reveal">
+        <span class="figure-num" data-count="2500" data-suffix="+">2,500+</span>
+        <span class="figure-lab">language pairs in the MaLA bilingual translation corpus</span>
+      </div>
+      <div class="figure-item reveal">
+        <span class="figure-num" data-count="16000" data-suffix="+">16,000+</span>
+        <span class="figure-lab">language pairs in the deduplicated MaLA OPUS corpus</span>
+      </div>
+      <div class="figure-item reveal">
+        <span class="figure-num" data-count="671" data-suffix="B">671B</span>
+        <span class="figure-lab">tokens of continual pretraining for EMMA-500 Llama 3</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section landing-section" id="about">
+    <div class="container editorial-grid">
+      <div class="editorial-text reveal">
+        <p class="section-eyebrow">Welcome to MaLA-LM 🌍</p>
+        <h2 class="title is-2">Closing the gap between high- and low-resource languages.</h2>
+        <p>
+          MaLA-LM (Massive Language Adaptation of Large Language Models) focuses on adapting large language models
+          to support hundreds of languages, including many underrepresented ones.
+          Our models are multilingual, scalable, and optimized for diverse linguistic tasks.
+        </p>
+        <p>
+          <strong>Featured 🗣️</strong> Check out our multilingual LLM collections, featuring models trained to
+          handle 500+ languages, ideal for global, multilingual applications. Dive into the HuggingFace collections:
+          <a href="https://huggingface.co/collections/MaLA-LM/emma-500-66eaa9acf1f512c8915b7166">EMMA-500</a>,
+          <a href="https://huggingface.co/collections/MaLA-LM/mala-corpus-66e05127641a51de34d39529">MaLA corpus</a>
+          and
+          <a href="https://huggingface.co/collections/MaLA-LM/mala-500-660e57f8e53e3cc2ccd31cb9">MaLA-500</a>.
+        </p>
+      </div>
+      <div class="editorial-visual reveal" aria-hidden="true">
+        <div class="globe">
+          <div class="globe-ring globe-ring-1"></div>
+          <div class="globe-ring globe-ring-2"></div>
+          <div class="globe-ring globe-ring-3"></div>
+          <img src="static/images/logos/mala-lm.png" alt="" class="globe-core">
+          <span class="globe-tag" style="--a: 0deg;">suomi</span>
+          <span class="globe-tag" style="--a: 45deg;">हिन्दी</span>
+          <span class="globe-tag" style="--a: 90deg;">Kiswahili</span>
+          <span class="globe-tag" style="--a: 135deg;">中文</span>
+          <span class="globe-tag" style="--a: 180deg;">Yorùbá</span>
+          <span class="globe-tag" style="--a: 225deg;">العربية</span>
+          <span class="globe-tag" style="--a: 270deg;">Quechua</span>
+          <span class="globe-tag" style="--a: 315deg;">ไทย</span>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- Paper abstract -->
-  <section class="section hero">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-            <p>
-              Welcome to MaLA-LM (Massive Language Adaptation of Large Language Models)! 🌍
-            </p>
-            <p>
-              MaLA-LM focuses on adapting large language models to support hundreds of languages, including many
-              underrepresented ones.
-              Our models are multilingual, scalable, and optimized for diverse linguistic tasks. We work on data
-              construction (e.g., <a
-                href="https://huggingface.co/collections/MaLA-LM/mala-corpus-66e05127641a51de34d39529">MaLA corpus</a>
-              and <a href="https://huggingface.co/datasets/MaLA-LM/PolyWrite">PolyWrite</a>), continual pretraining
-              (e.g., <a href="emma-500.html">EMMA-500</a>, <a href="mala-500.html">MaLA-500</a>, and <a
-                href="MixCPT.html">MixCPT</a>), instruction fine-tuning (e.g., <a
-                href="https://github.com/hplt-project/monolingual-multilingual-instruction-tuning">mono. vs.
-                multilingual Alpaca</a> and <a
-                href="https://huggingface.co/collections/MaLA-LM/lucky52-660e5fd24a2ced4b334d63d6">Lucky 52</a>) and
-              evaluation (e.g., <a href="https://github.com/MaLA-LM/GlotEval">GlotEval</a>).
-            </p>
-            <p>
-              <strong>Featured 🗣️</strong> Check out our multilingual LLM collections, featuring models trained to
-              handle 500+ languages,
-              ideal for global, multilingual applications.
-            </p>
-            <p>
-              Dive into the HuggingFace collections:
-              <a href="https://huggingface.co/collections/MaLA-LM/emma-500-66eaa9acf1f512c8915b7166">EMMA-500</a> |
-              <a href="https://huggingface.co/collections/MaLA-LM/mala-corpus-66e05127641a51de34d39529">MaLA corpus</a>
-              |
-              <a href="https://huggingface.co/collections/MaLA-LM/mala-500-660e57f8e53e3cc2ccd31cb9">MaLA-500</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
-  <!-- End paper abstract -->
-
-  <section class="section">
-    <div class="container is-max-desktop content">
-        <h2 class="title">Latest Updates</h2>
-        <ul>
-            <li>[2025.11] We launch the FineOPUS project for refining parallel texts in many languages 🌐<a href="http://mala-lm.github.io/FineOPUS.html" target="_blank">FineOPUS</a></li>
-            <li>[2025.06] We release EMMA-500 Llama 3/3.1 models and MaLA bilingual corpus in 2,500+ language pairs 🌐<a href="http://mala-lm.github.io/emma-500-gen2.html" target="_blank">EMMA-500 Gen2</a></li>
-            <li>[2025.05] We release MaLA OPUS bilingual corpus (2410), aka, parallel corpus, in 16,000+ language pairs 🤗<a href="https://huggingface.co/datasets/MaLA-LM/mala-opus-dedup-2410" target="_blank">MaLA-LM/mala-opus-dedup-2410</a></li>
-            <li>[2025.04] We release a series of CPT models that study the data mixing in continual pre-training 🤗<a href="https://huggingface.co/collections/Zihao-Li/mixcpt-67ea87fbc68ccdaa83fdc01c" target="_blank">MixCPT</a></li>
-            <li>[2025.04] We release the preview of GlotEval: A Test Suite for Massively Multilingual Evaluation of Large Language Models <i class="fab fa-github"></i> <a href="https://github.com/mala-lm/gloteval" target="_blank">GlotEval</a></li>
-            <li>[2024.09] We release PolyWrite, a synthetic benchmark for open-ended generation 🤗<a href="https://huggingface.co/datasets/MaLA-LM/PolyWrite" target="_blank">MaLA-LM/PolyWrite</a></li>
-            <li>[2024.09] We release the EMMA-500 Llama 2 model and MaLA monolingual corpus in 939 languages 🌐<a href="http://mala-lm.github.io/emma-500.html" target="_blank">EMMA-500</a></li>
-            <li>[2024.04] We release Lucky 52 models that study the number of languages for instruction fine-tuning 🤗<a href="https://huggingface.co/collections/MaLA-LM/lucky52-660e5fd24a2ced4b334d63d6" target="_blank">Lucky 52</a></li>
-            <li>[2024.03] We release the MaLA-500 v2 model 🤗<a href="https://huggingface.co/MaLA-LM/mala-500-10b-v2" target="_blank">MaLA-LM/mala-500-10b-v2</a></li>
-            <li>[2024.01] We release the MaLA-500 v1 model based on Llama 2 and LoRA 🤗<a href="https://huggingface.co/MaLA-LM/mala-500-10b-v1" target="_blank">MaLA-LM/mala-500-10b-v1</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container is-max-desktop content">
-        <h2 class="title">Our Works</h2>
-        <p>
-            <strong>Continual Pretraining 📜</strong>
-        </p>
-        <p>
-            <em><a href="emma-500-gen2.html">Massively Multilingual Adaptation of Large Language Models Using Bilingual Translation Data</a></em>
-        </p>
-        <p>
-            <em><a href="emma-500.html">EMMA-500: Enhancing Massively Multilingual Adaptation of Large Language Models</a></em>
-        </p>
-        <p>
-            <em><a href="mala-500.html">MaLA-500: Massive Language Adaptation of Large Language Models</a></em>
-        </p>
-        <p>
-            <em><a href="MixCPT.html">Rethinking Multilingual Continual Pretraining: Data Mixing for Adapting LLMs Across Languages and Resources</a></em>
-        </p>
-
-        <p>
-            <strong>Instruction Fine-tuning 🔮</strong>
-        </p>
-        <p>
-            <em><a href="https://arxiv.org/abs/2404.04850" target="_blank">How Many Languages Make Good Multilingual Instruction Tuning? A Case Study on BLOOM</a></em>
-        </p>
-        <p>
-            <em><a href="https://arxiv.org/abs/2309.08958" target="_blank">Monolingual or Multilingual Instruction Tuning: Which Makes a Better Alpaca</a></em>
-        </p>
-
-        <p>
-            <strong>Evaluation 🛠️</strong>
-        </p>
-        <p>
-            <em><a href="GlotEval.html">GlotEval: A Test Suite for Massively Multilingual Evaluation of Large Language Models</a></em>
-        </p>
-    </div>
-</section>
-
-  <footer class="footer">
+  <!-- Updates -->
+  <section class="section landing-section surface-band" id="updates">
     <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
+      <p class="section-eyebrow reveal">News</p>
+      <h2 class="title is-2 reveal">Latest Updates</h2>
+      <ol class="timeline">
+        <li class="reveal"><span class="timeline-date">2026.08</span><p>Reasoning over Grammar: Can Synthetic Linguistic Reasoning Traces Enhance Low-Resource Machine Translation? is accepted to Findings of EMNLP 2026 🎉 📄<a href="https://arxiv.org/abs/2606.03782" target="_blank">arXiv:2606.03782</a></p></li>
+        <li class="reveal"><span class="timeline-date">2026.07</span><p>MaLA: A Corpus and Data Mix for Massive Language Adaptation of Large Language Models (aka EMMA-500) is accepted to COLM 2026 🎉 📄<a href="https://www.olaresearch.org/MaLA/" target="_blank">MaLA</a></p></li>
+        <li class="reveal"><span class="timeline-date">2026.06</span><p>We release the preprint of Model-Based Quality Assessment for Massively Multilingual Parallel Data 📄<a href="https://arxiv.org/abs/2606.00285" target="_blank">arXiv:2606.00285</a></p></li>
+        <li class="reveal"><span class="timeline-date">2026.04</span><p>Data-Centric Continual Pre-training for 500+ Languages: A New Bilingual Translation Corpus and Multilingual Models (aka EMMA-500 Gen 2) is accepted to Findings of ACL 2026 🎉 📄<a href="https://aclanthology.org/2026.findings-acl.937/" target="_blank">ACL Anthology</a></p></li>
+        <li class="reveal"><span class="timeline-date">2026.01</span><p>Test-Time Scaling of Reasoning Models for Machine Translation is accepted to EACL 2026 🎉 📄<a href="https://aclanthology.org/2026.eacl-long.133/" target="_blank">ACL Anthology</a></p></li>
+        <li class="reveal"><span class="timeline-date">2025.11</span><p>We launch the FineOPUS project for refining parallel texts in many languages 🌐<a href="FineOPUS.html" target="_blank">FineOPUS</a></p></li>
+        <li class="reveal"><span class="timeline-date">2025.06</span><p>We release EMMA-500 Llama 3/3.1 models and MaLA bilingual corpus in 2,500+ language pairs 🌐<a href="emma-500-gen2.html" target="_blank">EMMA-500 Gen2</a></p></li>
+        <li class="reveal"><span class="timeline-date">2025.05</span><p>We release MaLA OPUS bilingual corpus (2410), aka, parallel corpus, in 16,000+ language pairs 🤗<a href="https://huggingface.co/datasets/MaLA-LM/mala-opus-dedup-2410" target="_blank">MaLA-LM/mala-opus-dedup-2410</a></p></li>
+        <li class="reveal"><span class="timeline-date">2025.04</span><p>We release a series of CPT models that study the data mixing in continual pre-training 🤗<a href="https://huggingface.co/collections/Zihao-Li/mixcpt-67ea87fbc68ccdaa83fdc01c" target="_blank">MixCPT</a></p></li>
+        <li class="reveal"><span class="timeline-date">2025.04</span><p>We release the preview of GlotEval: A Test Suite for Massively Multilingual Evaluation of Large Language Models <i class="fab fa-github"></i> <a href="https://github.com/mala-lm/gloteval" target="_blank">GlotEval</a></p></li>
+        <li class="reveal"><span class="timeline-date">2024.09</span><p>We release PolyWrite, a synthetic benchmark for open-ended generation 🤗<a href="https://huggingface.co/datasets/MaLA-LM/PolyWrite" target="_blank">MaLA-LM/PolyWrite</a></p></li>
+        <li class="reveal"><span class="timeline-date">2024.09</span><p>We release the EMMA-500 Llama 2 model and MaLA monolingual corpus in 939 languages 🌐<a href="emma-500.html" target="_blank">EMMA-500</a></p></li>
+        <li class="reveal"><span class="timeline-date">2024.04</span><p>We release Lucky 52 models that study the number of languages for instruction fine-tuning 🤗<a href="https://huggingface.co/collections/MaLA-LM/lucky52-660e5fd24a2ced4b334d63d6" target="_blank">Lucky 52</a></p></li>
+        <li class="reveal"><span class="timeline-date">2024.03</span><p>We release the MaLA-500 v2 model 🤗<a href="https://huggingface.co/MaLA-LM/mala-500-10b-v2" target="_blank">MaLA-LM/mala-500-10b-v2</a></p></li>
+        <li class="reveal"><span class="timeline-date">2024.01</span><p>We release the MaLA-500 v1 model based on Llama 2 and LoRA 🤗<a href="https://huggingface.co/MaLA-LM/mala-500-10b-v1" target="_blank">MaLA-LM/mala-500-10b-v1</a></p></li>
+      </ol>
+    </div>
+  </section>
 
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the
-              footer. <br> This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-
-          </div>
+  <!-- Research directions -->
+  <section class="section landing-section" id="research">
+    <div class="container">
+      <p class="section-eyebrow reveal">Research directions</p>
+      <h2 class="title is-2 reveal">From raw text to evaluated models, in every language.</h2>
+      <div class="pillar-grid">
+        <div class="pillar reveal">
+          <span class="pillar-icon">📚</span>
+          <span class="pillar-step">01</span>
+          <h3>Data Construction</h3>
+          <p>Open monolingual and parallel corpora covering hundreds of languages and thousands of language pairs.</p>
+          <ul>
+            <li><a href="https://huggingface.co/collections/MaLA-LM/mala-corpus-66e05127641a51de34d39529">MaLA corpus</a></li>
+            <li><a href="FineOPUS.html">FineOPUS</a></li>
+            <li><a href="https://huggingface.co/datasets/MaLA-LM/PolyWrite">PolyWrite</a></li>
+          </ul>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-icon">📜</span>
+          <span class="pillar-step">02</span>
+          <h3>Continual Pretraining</h3>
+          <p>Extending open LLMs to 500+ languages and studying how data mixes shape cross-lingual transfer.</p>
+          <ul>
+            <li><a href="emma-500-gen2.html">EMMA-500 Gen2</a></li>
+            <li><a href="emma-500.html">EMMA-500</a></li>
+            <li><a href="mala-500.html">MaLA-500</a></li>
+            <li><a href="MixCPT.html">MixCPT</a></li>
+          </ul>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-icon">🔮</span>
+          <span class="pillar-step">03</span>
+          <h3>Instruction Fine-tuning</h3>
+          <p>How many languages, and which ones, make multilingual instruction tuning work.</p>
+          <ul>
+            <li><a href="https://huggingface.co/collections/MaLA-LM/lucky52-660e5fd24a2ced4b334d63d6">Lucky 52</a></li>
+            <li><a href="https://github.com/hplt-project/monolingual-multilingual-instruction-tuning">Mono. vs. multilingual Alpaca</a></li>
+          </ul>
+        </div>
+        <div class="pillar reveal">
+          <span class="pillar-icon">🛠️</span>
+          <span class="pillar-step">04</span>
+          <h3>Evaluation</h3>
+          <p>Consistent, non-English-centric benchmarking of LLMs across dozens to hundreds of languages.</p>
+          <ul>
+            <li><a href="GlotEval.html">GlotEval</a></li>
+            <li><a href="https://huggingface.co/datasets/MaLA-LM/PolyWrite">PolyWrite benchmark</a></li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section landing-section surface-band" id="works">
+    <div class="container">
+      <p class="section-eyebrow reveal">Our works</p>
+      <h2 class="title is-2 reveal">Projects &amp; papers</h2>
+      <div class="research-grid">
+        <a href="FineOPUS.html" class="research-card reveal">
+          <span class="tag">New project &middot; 2025</span>
+          <h3>FineOPUS</h3>
+          <p>A massively multilingual translation corpus and pipeline, refining the OPUS collection of parallel texts in many languages.</p>
+          <div class="card-arrow">Read more <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="emma-500-gen2.html" class="research-card reveal">
+          <span class="tag">Continual pretraining</span>
+          <h3>Massively Multilingual Adaptation of Large Language Models Using Bilingual Translation Data</h3>
+          <p>The MaLA bilingual translation corpus in 2,500+ language pairs and the EMMA-500 Llama 3/3.1 models.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="emma-500.html" class="research-card reveal">
+          <span class="tag">Continual pretraining</span>
+          <h3>EMMA-500: Enhancing Massively Multilingual Adaptation of Large Language Models</h3>
+          <p>The EMMA-500 Llama 2 model and the MaLA monolingual corpus in 939 languages.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="mala-500.html" class="research-card reveal">
+          <span class="tag">Continual pretraining</span>
+          <h3>MaLA-500: Massive Language Adaptation of Large Language Models</h3>
+          <p>Vocabulary extension and continued pretraining on Llama 2 with Glot500-c to cover 534 languages.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="MixCPT.html" class="research-card reveal">
+          <span class="tag">Continual pretraining</span>
+          <h3>Rethinking Multilingual Continual Pretraining: Data Mixing for Adapting LLMs Across Languages and Resources</h3>
+          <p>36 CPT configurations comparing monolingual, bilingual and code-augmented data across 30+ languages.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="GlotEval.html" class="research-card reveal">
+          <span class="tag">Evaluation</span>
+          <h3>GlotEval: A Test Suite for Massively Multilingual Evaluation of Large Language Models</h3>
+          <p>A lightweight framework for seven tasks spanning dozens to hundreds of languages.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="https://arxiv.org/abs/2404.04850" target="_blank" class="research-card reveal">
+          <span class="tag">Instruction fine-tuning</span>
+          <h3>How Many Languages Make Good Multilingual Instruction Tuning? A Case Study on BLOOM</h3>
+          <p>The Lucky 52 models, studying the number of languages for instruction fine-tuning.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="https://arxiv.org/abs/2309.08958" target="_blank" class="research-card reveal">
+          <span class="tag">Instruction fine-tuning</span>
+          <h3>Monolingual or Multilingual Instruction Tuning: Which Makes a Better Alpaca</h3>
+          <p>Comparing monolingual and multilingual instruction tuning under a fixed budget.</p>
+          <div class="card-arrow">Read paper <i class="fas fa-arrow-right"></i></div>
+        </a>
+      </div>
+      <div class="more-cta reveal">
+        <a href="publications.html" class="research-card more-card">
+          <h3>All publications</h3>
+          <p>Search the full list of MaLA-LM papers and copy BibTeX citations.</p>
+          <div class="card-arrow">View full list <i class="fas fa-arrow-right"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section landing-section">
+    <div class="container">
+      <div class="join-band reveal">
+        <div>
+          <h2 class="title is-2">Bring your language.</h2>
+          <p>Our corpora, models and code are open. Join the community to ask questions, share results or contribute data for the languages you care about.</p>
+        </div>
+        <div class="join-actions">
+          <a href="https://discord.com/invite/F5mEb7U6we" target="_blank" class="cta-button cta-discord"><i class="fab fa-discord"></i>&nbsp; Join Discord</a>
+          <a href="https://huggingface.co/MaLA-LM" target="_blank" class="cta-button cta-hf"><span aria-hidden="true">🤗</span>&nbsp; Models &amp; data</a>
+          <a href="https://github.com/MaLA-LM" target="_blank" class="cta-button cta-github"><i class="fab fa-github"></i>&nbsp; Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a href="index.html" class="site-footer-brand">
+        <img src="static/images/logos/mala-lm.png" alt="MaLA-LM logo">
+        <span><strong>MaLA-LM</strong><span>Massive Language Adaptation of Large Language Models</span></span>
+      </a>
+      <div class="site-footer-links">
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/MaLA-LM" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://huggingface.co/MaLA-LM" target="_blank">🤗 Hugging Face</a>
+        <a href="https://discord.com/invite/F5mEb7U6we" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+      </div>
+    </div>
+    <div class="site-footer-base">&copy; 2026 MaLA-LM</div>
   </footer>
 
   <!-- Google tag (gtag.js) -->

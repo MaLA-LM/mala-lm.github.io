@@ -1,0 +1,21 @@
+# MaLA-LM — https://mala-lm.github.io/
+# All content is public; search engines and AI agents are welcome.
+
+User-agent: *
+Allow: /
+Disallow: /emma-500-v2.html
+
+# AI crawlers and assistants
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://mala-lm.github.io/sitemap.xml
